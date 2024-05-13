@@ -1,0 +1,21 @@
+a:link{
+    background-color: gray;
+    overflow: hidden;
+}
+a:link{
+    color: azure;
+    float: left;
+    display: ruby-base;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+}
+ a:hover{
+    color: #373737;
+    background-color: azure;
+    text-decoration: none;
+}
+
+a:link{
+    float: left;
+}
