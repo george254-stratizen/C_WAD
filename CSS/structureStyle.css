@@ -1,0 +1,152 @@
+.h1{
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    text-decoration:underline ;
+    text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+}
+
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.content{
+    float: left;
+    width: 66%;
+    padding: 15px;
+}
+.side_bar{
+    float: left;
+    width: 34%;
+    padding: 15px; 
+    
+}
+
+@media screen and (max-width: 500px)  
+ {
+    .content, .side_bar {
+        width: 100%;
+    }
+    .academics_img{
+        width:100%
+    }
+    
+} 
+    
+
+.footer{
+    background-color: rgba(45, 75, 89, 20%);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.7em;
+}
+body{
+    background-color: darkgoldenrod;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+.h1{
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    text-decoration:underline ;
+    text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+}
+
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.content{
+    float: left;
+    width: 66%;
+    padding: 15px;
+}
+.side_bar{
+    float: left;
+    width: 34%;
+    padding: 15px; 
+    
+}
+
+@media screen and (max-width: 500px)  
+ {
+    .content, .side_bar {
+        width: 100%;
+    }
+    .academics_img{
+        width:100%
+    }
+    
+} 
+    
+
+.footer{
+    background-color: rgba(45, 75, 89, 20%);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+
+h3{
+    text-align: center;
+    color:rgb(79, 138, 11); 
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+table{
+    border: solid 1px #373737;
+    width: 70%;
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px #373737;
+    padding: 5px;
+    text-align: left;
+}
+th{
+    background-color: rgba(0, 0, 0, 90%);
+    color: rgba(255, 255, 255, 90%);
+    padding: 5px;
+    text-align: left;
+}
+tr:nth-child(odd){
+    background-color: bisque;
+}
+tr:hover{
+    background-color: rgb(243, 235, 225);
+}
+
+
+.contact_form label{
+    font-size: 1.8em;
+}
+
+.fa-twitter
+{
+   font-size: 70px;
+   color:skyblue;
+}
+.fa-instagram
+{
+    font-size: 70px;
+    color:palevioletred;
+
+
+}
+.fa-whatsapp
+{
+    font-size: 70px;
+    color: CMYK(37, 211, 102)
+}
