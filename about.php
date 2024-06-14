@@ -9,15 +9,7 @@
     <body style="background-color: darkgoldenrod;">
 
         
-       <a href="about.html" > about </a>
-       <a href="index.html" > home </a>
-       <a href="Fee.html" > Fee </a>
-       <a href="registration.html" > Registration </a>
-       <a href="campusLife.html" > CampusLife </a>
-       <a href="contact_us.html" > Contact </a>
-       <a href="courses.html" > Courses </a>
-       <a href="signup.html">Sign Up</a><br><br>
-       <br><br>
+    <?php include_once("templates/nav.php");?>
         <h1 >About Us</h1>
         
 

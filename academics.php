@@ -5,17 +5,10 @@
         <title>Welcome - page</title>
         <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
     </head>
+    <?php include_once("templates/nav.php");?>
     <body style="background-color:burlywood ;">
         
-        <a href="about.html" > about </a>
-        <a href="index.html" > home </a>
-        <a href="Fee.html" > Fee </a>
-        <a href="registration.html" > Registration </a>
-        <a href="campusLife.html" > CampusLife </a>
-        <a href="contact_us.html" > Contact </a>
-        <a href="courses.html" > Courses </a>
-        <a href="signup.html">Sign Up</a><br><br>
-
+     
 
        <!--Start of Academic info-->
        <h1>Academics</h1>
