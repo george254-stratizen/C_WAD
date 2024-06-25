@@ -7,7 +7,7 @@
     </head>
     <body >
         
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("C:\xampp\htdocs\C_WAD\C_WAD\php\template\nav.php");?>
        <h1>Fee</h1>
        <table  border ="lpx"style="width: 50%;
        border: lpx solid #373737;

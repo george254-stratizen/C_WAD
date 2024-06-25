@@ -7,10 +7,10 @@
     </head>
     <body>
         
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("C_WAD/C_WAD/templates/nav.php");?>
 <h1 >Campus Life</h1>
 
-  <p>"At Excellence University, we believe that learning
+  <p>"At our Excellence University, we believe that learning
       extends beyond the classroom. Our campus is a vibrant
        community where students can engage in a wide range of
         activities, from student organizations and clubs to sports and cultural events.

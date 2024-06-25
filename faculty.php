@@ -7,7 +7,7 @@
     </head>
     <body >
         
-    <?php include_once("templates/nav.php");?>
+    
        
       
        <h1 >Faculty</h1>
