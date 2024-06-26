@@ -9,7 +9,7 @@
     <body style="background-color: darkgoldenrod;">
 
         
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("template/nav.php");?>
         <h1 >About Us</h1>
         
 
@@ -41,6 +41,7 @@
                       of every member of our university community
                 </p>
                  <img src="C:\C_WAD\images\students.jpg" style="width:700px">
+                 <?php include_once ("template/footer.php");?>
     </body>
     
 </html>

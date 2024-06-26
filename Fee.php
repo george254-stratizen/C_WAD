@@ -7,7 +7,20 @@
     </head>
     <body >
         
-    <?php include_once("C:\xampp\htdocs\C_WAD\C_WAD\php\template\nav.php");?>
+    <div class="topnav">
+    <a href="index.php">Home</a>
+    <a href="about.php">About Us</a>
+    <a href="academics.php">Academics</a>
+    <a href="campusLife.php">Campus Life</a>
+    <a href="faculty.php">Faculty</a>
+    <a href="fee.php">Fee</a>
+    <a href="registration.php">Registration</a>
+    <a href="courses.php">Courses</a>
+    <div class="topnav-right">
+        <a href="signup.php">Sign Up</a>
+        
+    </div>
+</div>
        <h1>Fee</h1>
        <table  border ="lpx"style="width: 50%;
        border: lpx solid #373737;
@@ -61,6 +74,7 @@
       
         </tr>
        </table>
+       <?php include_once ("template/footer.php");?>
     </body>
 </html>
        

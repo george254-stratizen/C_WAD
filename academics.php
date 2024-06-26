@@ -5,7 +5,7 @@
         <title>Welcome - page</title>
         <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
     </head>
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("template/nav.php");?>
     <body style="background-color:burlywood ;">
         
      
@@ -22,5 +22,5 @@
 
       <img class="academics_img" src="images/Books.jpg" width="40%">
           </p>
-
+          <?php include_once ("template/footer.php");?>
     </body>

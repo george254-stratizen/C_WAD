@@ -7,7 +7,7 @@
     </head>
     <body >
         
-    
+    <?php include_once("template/nav.php");?>
        
       
        <h1 >Faculty</h1>
@@ -28,5 +28,6 @@
             Join us at Excellence University and learn from the best in the 
             field. Our faculty are here to help you succeed.
        </p>
+       <?php include_once ("template/footer.php");?>
     </body>
 </html>

@@ -22,7 +22,7 @@
     </style>
     <body style="background-color: darkgoldenrod;">
         
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("template/nav.php");?>
        <div class="content">
       <!--address information-->
        <h1>contact_info</h1>
@@ -34,16 +34,7 @@
         Email:  excellenceuni@gmail.com
        </address>
          
-       <footer>
-         <p>
-            2023 Excellence University.All rights reserved.<br><br>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-         </p>
-         
-       </footer>
-       </div>
+       <?php include_once("template/footer.php");?>
 
        
     </body>

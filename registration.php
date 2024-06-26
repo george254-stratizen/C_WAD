@@ -6,7 +6,7 @@
 <body>
        
     
-<?php include_once("templates/nav.php");?>
+<?php include_once("template/nav.php");?>
     
     <h1>Forms</h1>
     <form action="">
@@ -48,6 +48,8 @@
 <br>
         
     </form>
+
+    <?php include_once ("template/footer.php");?>
 </body>
 
 </html>

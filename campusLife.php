@@ -25,5 +25,6 @@
      Join us at Excellence University and experience a campus life like no
       other. Make lifelong friends, explore new interests, and create memories
        that will last a lifetime." </p>
+       <?php include_once ("template/footer.php");?>
     </body>
 </html>
