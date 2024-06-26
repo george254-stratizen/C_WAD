@@ -7,7 +7,7 @@
     </head>
     <body>
         
-    <?php include_once("C_WAD/C_WAD/templates/nav.php");?>
+   
 <h1 >Campus Life</h1>
 
   <p>"At our Excellence University, we believe that learning

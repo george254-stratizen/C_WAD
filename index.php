@@ -11,7 +11,7 @@
       <i class="fa fa-home" aria-hidden="true"></i>
        <h1>Welcome</h1>
       
-       <p>Excellence university is a university of higher learning.It is 
+       <p>Excellence  is a university of higher learning.It is 
         internationally recognised for offering quality education for students.
         We offer a variety of courses which by our research have been proven to 
         be very marketable in todays job market.   </p>
