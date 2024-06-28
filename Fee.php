@@ -16,6 +16,7 @@
     <a href="fee.php">Fee</a>
     <a href="registration.php">Registration</a>
     <a href="courses.php">Courses</a>
+    <a href="db_connect.php"></a>
     <div class="topnav-right">
         <a href="signup.php">Sign Up</a>
         
