@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2024 at 04:20 PM
+-- Generation Time: Jul 01, 2024 at 12:12 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,7 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `e_uni`
 --
-DROP DATABASE IF EXISTS `e_uni`;
 CREATE DATABASE IF NOT EXISTS `e_uni` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `e_uni`;
 
@@ -38,11 +37,6 @@ CREATE TABLE `gender` (
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Truncate table before insert `gender`
---
-
-TRUNCATE TABLE `gender`;
 --
 -- Dumping data for table `gender`
 --
@@ -66,11 +60,6 @@ CREATE TABLE `roles` (
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Truncate table before insert `roles`
---
-
-TRUNCATE TABLE `roles`;
 --
 -- Dumping data for table `roles`
 --
@@ -99,10 +88,12 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Truncate table before insert `users`
+-- Dumping data for table `users`
 --
 
-TRUNCATE TABLE `users`;
+INSERT INTO `users` (`userid`, `fullname`, `username`, `email`, `password`, `user_roleId`, `datecreated`, `dateupdated`) VALUES
+(124, 'Amos ', 'amos1234', 'amos@1234gmail.com', '23455', 1, '2024-07-01 13:09:36', '2024-07-01 13:09:36');
+
 --
 -- Indexes for dumped tables
 --
@@ -148,7 +139,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` bigint(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userid` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
