@@ -16,7 +16,19 @@ if(isset($_POST["send_message"])){
     $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
     $subject_line = mysqli_real_escape_string($conn, $_POST["subject_line"]);
     $text_message = mysqli_real_escape_string($conn, $_POST["message"]);
-}?>
+}
+
+$insert_message = "INSERT INTO messages (sender_name, sender_email,
+subject_line, message) VALUES ('$fullname', '$email', '$subject_line',
+'$text_message')";
+     if ($conn->query($insert_message) === TRUE) {
+        header("Location: view_messages.php");
+        exit();
+    } else {
+        echo "Error: " . $insert_message . "<br>" . $conn->error;
+    }
+
+?>
 <div class="row">
     <div class="content">
     <h1>Talk To Us</h1>
