@@ -10,7 +10,13 @@
 <div class="header">
     
 </div>
-        
+ <?php 
+if(isset($_POST["send_message"])){
+    $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+    $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
+    $subject_line = mysqli_real_escape_string($conn, $_POST["subject_line"]);
+    $text_message = mysqli_real_escape_string($conn, $_POST["message"]);
+}?>
 <div class="row">
     <div class="content">
     <h1>Talk To Us</h1>

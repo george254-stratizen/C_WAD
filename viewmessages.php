@@ -1,86 +1,67 @@
 <?php
-    include_once("template/nav.php");
-    require_once("includes/db_connect.php");
+require_once("includes/db_connect.php"); // Ensure this is the correct path to your database connection file
 
-    if(isset($_GET["DelId"])) {
-        $DelId = mysqli_real_escape_string($conn, $_GET["DelId"]);
-        
-        // sql to delete a record using prepared statement
-        $stmt = $conn->prepare("DELETE FROM `messages` WHERE messageId=? LIMIT 1");
-        $stmt->bind_param("i", $DelId);
-        
-        if ($stmt->execute()) {
-            header("Location: view_messages.php");
-            exit();
-        } else {
-            error_log("Error deleting record: " . $stmt->error);
-            echo "Error deleting record.";
-        }
-        
-        $stmt->close();
-    }
-?>
-<div class="header">
-    <h1>Messages</h1>
-</div>
-        
-<div class="row">
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, laborum</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>SN</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Subject</th>
-                    <th>Time</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-<?php
-$select_msg = "SELECT * FROM `messages` ORDER BY datecreated DESC";
-$sel_msg_res = $conn->query($select_msg);
-$cm=0;
+// Retrieve the specific message ID from the GET request
+$messageId = mysqli_real_escape_string($conn, $_GET["id"]);
 
-if ($sel_msg_res->num_rows > 0) {
-    while($sel_msg_row = $sel_msg_res->fetch_assoc()) {
-        $cm++;
-?>
-        <tr>
-            <td><?php echo $cm; ?>.</td>
-            <td><?php echo htmlspecialchars($sel_msg_row["sender_name"]); ?></td>
-            <td><?php echo htmlspecialchars($sel_msg_row["sender_email"]); ?></td>
-            <td><?php echo '<strong>' . htmlspecialchars($sel_msg_row["subject_line"]) . '</strong> - ' . htmlspecialchars(substr($sel_msg_row["message"], 0, 25)) . '...'; ?></td>
-            <td><?php echo date("d-M-Y H:i", strtotime($sel_msg_row["datecreated"])); ?></td>
-            <td>
-                [ <a href="edit_msg.php?messageId=<?php echo $sel_msg_row["messageId"]; ?>">Edit</a> ]
-                [ <a href="?DelId=<?php echo $sel_msg_row["messageId"]; ?>" onclick="return confirm('Are you sure you want to delete this message permanently from the database ?')">Del</a> ]
-            </td>
-        </tr>
-<?php
+// Select the message to be edited
+$spot_msg = "SELECT * FROM contact_us WHERE id = '$messageId' LIMIT 1";
+$spot_msg_res = $conn->query($spot_msg);
+$spot_msg_row = $spot_msg_res->fetch_assoc();
+
+// Check if the form is submitted
+if (isset($_POST["update_message"])) {
+    $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $text_message = mysqli_real_escape_string($conn, $_POST["message"]);
+    $messageId = mysqli_real_escape_string($conn, $_POST["id"]);
+
+    // Update the message in the database
+    $update_message = "UPDATE contact_us SET name = '$fullname', email = '$email', message = '$text_message' WHERE id = '$messageId' LIMIT 1";
+
+    if ($conn->query($update_message) === TRUE) {
+        header("Location: view_messages.php");
+        exit();
+    } else {
+        echo "Error: " . $update_message . "<br>" . $conn->error;
     }
-} else {
-    echo "<tr><td colspan='6'>0 results</td></tr>";
 }
 ?>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>SN</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Subject</th>
-                    <th>Time</th>
-                    <th>Actions</th>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
-</div>
-<?php
-    include_once("template/footer.php");
-    $conn->close();
-?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Contact Us Message - SOL TECH SOLUTIONS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/SOL TECH SOLUTIONS.png" alt="SolTech Solutions Logo" class="logo">
+        <h1>Update Contact Us Message</h1>
+        <?php include_once("template/nav.php"); ?>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Update Contact Us Message</h2>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="form">
+                <label for="fn">Full Name:</label>
+                <input type="text" name="fullname" id="fn" placeholder="Full Name" required value="<?php echo $spot_msg_row['name']; ?>">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required value="<?php echo $spot_msg_row['email']; ?>">
+
+                <label for="ms">Message:</label>
+                <textarea cols="30" rows="7" name="message" id="ms" placeholder="Your Message" required><?php echo $spot_msg_row['message']; ?></textarea>
+
+                <input type="submit" name="update_message" value="Update Message">
+                <input type="hidden" name="id" value="<?php echo $spot_msg_row['id']; ?>">
+            </form>
+        </div>
+    </main>
+
+    <?php include_once("template/footer.php"); ?>
+</body>
+</html>
