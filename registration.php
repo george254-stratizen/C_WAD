@@ -3,6 +3,9 @@
     <meta charset="UTF" >
     <title>Registration - page</title>
     <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
 <body>
        
     

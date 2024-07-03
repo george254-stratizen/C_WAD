@@ -11,6 +11,7 @@
     
 </div>
  <?php 
+
 if(isset($_POST["send_message"])){
     $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
     $email = mysqli_real_escape_string($conn, $_POST["email_address"]);

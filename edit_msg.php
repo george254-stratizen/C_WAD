@@ -1,7 +1,8 @@
 <?php
+     include_once("template/nav.php");
     require_once("includes/db_connect.php");
-    include_once("templates/header.php");
-    include_once("templates/nav.php");
+    include_once("template/header.php");
+     include_once("viewmessages.php");
 
     $messageId = mysqli_real_escape_string($conn, $_GET["messageId"]);
 

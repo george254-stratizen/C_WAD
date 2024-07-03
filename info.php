@@ -4,6 +4,9 @@
         <meta charset="UTF" >
         <title>contact_us - page</title>
         <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
      
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 

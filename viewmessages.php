@@ -1,7 +1,7 @@
 <?php
     require_once("includes/db_connect.php");
-    include_once("templates/header.php");
-    include_once("templates/nav.php");
+    include_once("template/header.php");
+    include_once("template/nav.php");
 
     if(isset($_GET["DelId"])){
         $DelId = mysqli_real_escape_string($conn, $_GET["DelId"]);

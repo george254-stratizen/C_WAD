@@ -6,6 +6,10 @@
     <title>Hamsy BioTech Inc.</title>
     <link rel="stylesheet" href="css/sign.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
 </head>
 <body>
 <?php include_once("templates/nav.php");?>
