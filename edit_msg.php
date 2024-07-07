@@ -1,10 +1,14 @@
+<link rel="stylesheet" href="CSS\style.css">
+        <link rel="stylesheet" href="CSS\navStyle.css">
+        <link rel="stylesheet" href="CSS\structureStyle.css">
+        <link rel="stylesheet" href="CSS\table.css"><br><br>
 <?php
      include_once("template/nav.php");
     require_once("includes/db_connect.php");
     include_once("template/header.php");
      include_once("viewmessages.php");
 
-    $messageId = mysqli_real_escape_string($conn, $_GET["messageId"]);
+     $messageId = mysqli_real_escape_string($conn, $_GET["messageId"]);
 
     $spot_msg = "SELECT * FROM `messages` WHERE messageId = '$messageId' LIMIT 1";
     $spot_msg_res = $conn->query($spot_msg);

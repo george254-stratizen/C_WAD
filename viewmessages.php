@@ -1,7 +1,8 @@
+
 <?php
+    
+     include_once("template/nav.php");
     require_once("includes/db_connect.php");
-    include_once("template/header.php");
-    include_once("template/nav.php");
 
     if(isset($_GET["DelId"])){
         $DelId = mysqli_real_escape_string($conn, $_GET["DelId"]);
@@ -25,7 +26,7 @@
 <div class="row">
     <div class="content">
 
-    <h1>Messages</h1>
+    
     <p>Lorem ipsum dolor sit amet, laborum</p>
     <table>
         <thead>
@@ -73,7 +74,6 @@ if ($sel_msg_res->num_rows > 0) {
             </tr>
         </thead>
     </table>
-</div>
-<?php include_once("templates/side_bar.php");?>
-        </div>      
-<?php include_once("templates/footer.php");?>
+
+             
+<?php include_once("template/footer.php");?>

@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF" >
         <title>Fee - page</title>
-        <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
+        <link rel="stylesheet" href="CSS\style.css">
+        <link rel="stylesheet" href="CSS\navStyle.css">
+        <link rel="stylesheet" href="CSS\structureStyle.css">
+        <link rel="stylesheet" href="CSS\table.css">
     </head>
     <body >
         
-    <?php include_once("templates/nav.php");?>
+    <?php include_once("template/nav.php");?>
 
       
 

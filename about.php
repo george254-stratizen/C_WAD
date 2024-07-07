@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="ën">
-    <head>
-        <meta charset="ÜTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About - Us</title>
-        <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
-    </head>
-    <body style="background-color: darkgoldenrod;">
+
+   
 
         
     <?php include_once("template/nav.php");?>

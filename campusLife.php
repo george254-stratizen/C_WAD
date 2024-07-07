@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF" >
-        <title>Welcome - page</title>
-        <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
-        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
-    </head>
+
+<link rel="stylesheet" href="C:\xampp\htdocs\C_WAD\C_WAD\CSS\navStyle.css">
     <body>
-        
-   
+    <?php include_once("template/header.php");?>
+    <?php include_once("template/nav.php");?>
 <h1 >Campus Life</h1>
 
   <p>"At our Excellence University, we believe that learning

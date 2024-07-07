@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" >
-        <title>BBIT 2.1 C</title>
-        <link rel="stylesheet" href="css/style.css">
+        <meta charset="UTF" >
+        <title>Welcome - page</title>
+        <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\navStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\structureStyle.css">
+        <link rel="stylesheet" href="C:\C_WAD\CSS\table.css">
     </head>
-    <body>

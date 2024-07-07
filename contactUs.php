@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF" >
         <title>Welcome - page</title>
-        <link rel="stylesheet" href="C:\C_WAD\CSS\style.css">
+        <link rel="stylesheet" href="CSS\style.css">
+        <link rel="stylesheet" href="CSS\navStyle.css">
+        <link rel="stylesheet" href="CSS\structureStyle.css">
+        <link rel="stylesheet" href="CSS\table.css">
     </head>
     <?php include_once("template/nav.php");?>
     <body style="background-color: darkgoldenrod;">
