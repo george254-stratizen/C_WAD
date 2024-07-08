@@ -1,23 +1,62 @@
-table{
-    border: solid 1px #373737;
-    width: 70%;
+/* Container for centering the table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Table styling */
+table {
+    border: solid 1px #444444;
+    width: 80%;
     border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-td{
-    border: solid 1px #373737;
-    padding: 5px;
+
+/* Table header styling */
+th {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    border-bottom: solid 2px #373737;
+}
+
+/* Table cell styling */
+td {
+    border: solid 1px #ddd;
+    padding: 10px;
     text-align: left;
 }
-th{
-    background-color: rgba(0, 0, 0, 90%);
-    color: rgba(255, 255, 255, 90%);
-    padding: 5px;
-    text-align: left;
+
+/* Alternate row coloring for better readability */
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
-tr:nth-child(odd){
-    background-color: bisque;
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f1f1f1;
 }
-tr:hover{
-    background-color: rgb(243, 235, 225);
+
+/* Table header and first column fixed during scrolling */
+table th:first-child, 
+table td:first-child {
+    position: sticky;
+    left: 0;
+    background: #f3f3f3;
+    z-index: 1;
 }
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
 

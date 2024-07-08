@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF" >
-        <title>Welcome - page</title>
-        <link rel="stylesheet" href="CSS\style.css">
-        <link rel="stylesheet" href="CSS\navStyle.css">
-        <link rel="stylesheet" href="CSS\structureStyle.css">
-        <link rel="stylesheet" href="CSS\table.css">
-    </head>
-    <?php include_once("template/nav.php");?>
-    <body style="background-color: darkgoldenrod;">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - page</title>
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="stylesheet" href="CSS\navStyle.css">
+    <link rel="stylesheet" href="CSS\structureStyle.css">
+    <link rel="stylesheet" href="CSS\table.css">
+</head>
+<?php include_once("template/nav.php");?>
+<body style="background-color: darkgoldenrod;">
 <div class="header">
-    
 </div>
- <?php 
+<?php 
+// Include database connection
+include_once("includes/db_connect.php");
 
 if(isset($_POST["send_message"])){
     $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
     $email = mysqli_real_escape_string($conn, $_POST["email_address"]);
     $subject_line = mysqli_real_escape_string($conn, $_POST["subject_line"]);
     $text_message = mysqli_real_escape_string($conn, $_POST["message"]);
-}
 
-$insert_message = "INSERT INTO messages (sender_name, sender_email,
-subject_line, message) VALUES ('$fullname', '$email', '$subject_line',
-'$text_message')";
-     if ($conn->query($insert_message) === TRUE) {
+    $insert_message = "INSERT INTO messages (sender_name, sender_email, subject_line, message) VALUES ('$fullname', '$email', '$subject_line', '$text_message')";
+    
+    if ($conn->query($insert_message) === TRUE) {
         header("Location: view_messages.php");
         exit();
     } else {
         echo "Error: " . $insert_message . "<br>" . $conn->error;
     }
-
+}
 ?>
 <div class="row">
     <div class="content">
@@ -45,15 +44,18 @@ subject_line, message) VALUES ('$fullname', '$email', '$subject_line',
         
         <label for="sb">Subject:</label><br>
         <select name="subject_line" id="sb" required>
-            <option value="">---Select Subject-</option>
+            <option value="">---Select Subject---</option>
             <option value="Email Support">Email Support</option>
             <option value="eLearning Support">eLearning Support</option>
             <option value="AMS Support">AMS Support</option>
         </select>
         <br><br>
-    <label for="ms">Message:</label><br>
-    <textarea cols="30" rows="7" name="message" id="ms" required></textarea><br><br>
-    <input type="submit" name="send_message" value="Send Message" >
-</form>
+        <label for="ms">Message:</label><br>
+        <textarea cols="30" rows="7" name="message" id="ms" required></textarea><br><br>
+        <input type="submit" name="send_message" value="Send Message">
+    </form>
+    </div>
 </div>
 <?php include_once ("template/footer.php");?>
+</body>
+</html>

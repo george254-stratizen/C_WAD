@@ -24,7 +24,7 @@
         $update_message = "UPDATE messages SET sender_name = '$fullname', sender_email = '$email', subject_line = '$subject_line', message = '$text_message' WHERE messageId='$messageId' LIMIT 1";
       
         if ($conn->query($update_message) === TRUE) {
-            header("Location: view_messages.php");
+            header("Location: viewmessages.php");
             exit();
         } else {
             echo "Error: " . $update_message . "<br>" . $conn->error;

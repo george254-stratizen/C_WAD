@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Title Styles */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.vision-title, .mission-title {
+    font-size: 1.5em;
+    color: brown;
+    margin-top: 20px;
+}
+
+.vision-text, .mission-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Flexbox Container */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width: 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Image Styles */
+.vision-image, .mission-image {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+}
